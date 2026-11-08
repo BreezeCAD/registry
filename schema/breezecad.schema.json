@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/BreezeCAD/registry/blob/main/schema/breezecad.schema.json",
+  "title": "Паспорт модуля или библиотеки BreezeCAD (breezecad.json)",
+  "description": "Лежит в корне репозитория модуля или библиотеки. Каталог BreezeCAD/registry читает его раз в сутки и собирает index.json.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "type", "id", "name", "author", "description", "minBreezeCAD", "download"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": {
+      "const": 1,
+      "description": "Версия этого формата. Сейчас 1."
+    },
+    "type": {
+      "enum": ["module", "library"],
+      "description": "module — модуль (.bzmod, код или JSON-команды); library — библиотека изделий (.bzlib) и другие данные."
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{1,63}$",
+      "description": "Уникальный id латиницей: тот же, что в module.json или в поле id пакета .bzlib."
+    },
+    "name": { "$ref": "#/$defs/text", "description": "Название, как его увидит пользователь." },
+    "author": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ru", "en"],
+      "properties": {
+        "ru": { "type": "string", "minLength": 2, "maxLength": 80 },
+        "en": { "type": "string", "minLength": 2, "maxLength": 80 },
+        "github": { "type": "string", "pattern": "^[A-Za-z0-9-]{1,39}$", "description": "Ник на GitHub (необязательно)." }
+      },
+      "description": "Автор: так он показывается и по нему фильтруется каталог."
+    },
+    "description": { "$ref": "#/$defs/text", "description": "Одно-два предложения: что делает и кому нужно." },
+    "tags": {
+      "type": "array",
+      "maxItems": 12,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-zа-яё0-9][a-zа-яё0-9 +.-]{0,31}$" },
+      "description": "Теги строчными буквами: «3d-печать», «двигатели», «mcp»."
+    },
+    "minBreezeCAD": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+(\\.\\d+){0,2}$",
+      "description": "Самая старая версия BreezeCAD, где это работает: 0.2.5 или 0.2.5.1."
+    },
+    "license": { "type": "string", "maxLength": 64 },
+    "homepage": { "type": "string", "format": "uri", "pattern": "^https://" },
+    "bundled": {
+      "type": "boolean",
+      "description": "true — уже входит в BreezeCAD, скачивать отдельно не нужно."
+    },
+    "download": {
+      "description": "Откуда брать файлы: из выпуска GitHub (сам находит свежую версию) или прямыми ссылками.",
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["release", "assets"],
+          "properties": {
+            "repo": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9-]+/[A-Za-z0-9._-]+$",
+              "description": "owner/name. По умолчанию — репозиторий, где лежит паспорт."
+            },
+            "release": {
+              "type": "string",
+              "minLength": 1,
+              "description": "latest — последний выпуск (не пре-релиз), либо тег выпуска."
+            },
+            "assets": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "type": "string", "minLength": 1 },
+              "description": "Имена файлов выпуска, можно со * и ?: «diy-motion.bzlib», «bz-mcp-*.bzmod»."
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["urls"],
+          "properties": {
+            "version": { "type": "string", "maxLength": 32 },
+            "urls": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["url"],
+                "properties": {
+                  "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+                  "name": { "type": "string", "maxLength": 80 },
+                  "platform": { "$ref": "#/$defs/platform" }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "$defs": {
+    "text": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ru", "en"],
+      "properties": {
+        "ru": { "type": "string", "minLength": 2, "maxLength": 400 },
+        "en": { "type": "string", "minLength": 2, "maxLength": 400 }
+      }
+    },
+    "platform": { "enum": ["windows", "linux", "macos", "android", "ios", "any"] }
+  }
+}

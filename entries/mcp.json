@@ -1,0 +1,17 @@
+{
+  "$schema": "../schema/breezecad.schema.json",
+  "schemaVersion": 1,
+  "type": "module",
+  "id": "mcp",
+  "name": { "ru": "MCP-сервер для нейросетей", "en": "MCP server for AI assistants" },
+  "author": { "ru": "Михаил Афонишев", "en": "Mikhail Afonishev" },
+  "description": {
+    "ru": "Нейросеть-ассистент строит прямо в открытом BreezeCAD: эскизы, операции, сборки, внешний вид — 65 инструментов, каждое изменение отменяется Ctrl+Z. Работает только на вашем компьютере и по ключу.",
+    "en": "Your AI assistant builds right in the open BreezeCAD: sketches, features, assemblies, appearance — 65 tools, every change undoable with Ctrl+Z. Listens only on your computer and only with a key."
+  },
+  "tags": ["mcp", "нейросети", "автоматизация"],
+  "minBreezeCAD": "0.2.1",
+  "license": "MPL-2.0",
+  "homepage": "https://github.com/BreezeCAD/bz-module-mcp",
+  "download": { "repo": "BreezeCAD/breezecad", "release": "modules", "assets": ["bz-mcp-*.bzmod"] }
+}

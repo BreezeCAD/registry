@@ -1,0 +1,62 @@
+{
+  "$schema": "../schema/breezecad.schema.json",
+  "schemaVersion": 1,
+  "type": "library",
+  "id": "steel-stock",
+  "name": {
+    "ru": "Металлопрокат: профили, трубы, лист, уголки, швеллеры, двутавры",
+    "en": "Steel stock: hollow sections, tubes, sheet, angles, channels, I-beams"
+  },
+  "author": {
+    "ru": "Михаил Афонишев",
+    "en": "Mikhail Afonishev"
+  },
+  "description": {
+    "ru": "Шесть пакетов стандартных изделий по ГОСТ: профили гнутые замкнутые, трубы, листы, уголки, швеллеры и двутавры. Уже встроены в BreezeCAD — файлы здесь, если нужно поставить отдельно или посмотреть таблицы.",
+    "en": "Six standard part packs to Russian GOST standards: hollow sections, round tubes, sheet, angles, channels and I-beams. Already built into BreezeCAD — the files are here if you want them separately or need the tables."
+  },
+  "tags": [
+    "металлопрокат",
+    "гост",
+    "рамы"
+  ],
+  "minBreezeCAD": "0.2.3",
+  "license": "MPL-2.0",
+  "bundled": true,
+  "homepage": "https://github.com/BreezeCAD/breezecad/tree/main/assets/library",
+  "download": {
+    "version": "1",
+    "urls": [
+      {
+        "url": "https://github.com/BreezeCAD/breezecad/raw/main/assets/library/angles.bzlib",
+        "name": "angles.bzlib",
+        "platform": "any"
+      },
+      {
+        "url": "https://github.com/BreezeCAD/breezecad/raw/main/assets/library/beams.bzlib",
+        "name": "beams.bzlib",
+        "platform": "any"
+      },
+      {
+        "url": "https://github.com/BreezeCAD/breezecad/raw/main/assets/library/channels.bzlib",
+        "name": "channels.bzlib",
+        "platform": "any"
+      },
+      {
+        "url": "https://github.com/BreezeCAD/breezecad/raw/main/assets/library/profiles.bzlib",
+        "name": "profiles.bzlib",
+        "platform": "any"
+      },
+      {
+        "url": "https://github.com/BreezeCAD/breezecad/raw/main/assets/library/sheets.bzlib",
+        "name": "sheets.bzlib",
+        "platform": "any"
+      },
+      {
+        "url": "https://github.com/BreezeCAD/breezecad/raw/main/assets/library/tubes.bzlib",
+        "name": "tubes.bzlib",
+        "platform": "any"
+      }
+    ]
+  }
+}

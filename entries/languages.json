@@ -1,0 +1,17 @@
+{
+  "$schema": "../schema/breezecad.schema.json",
+  "schemaVersion": 1,
+  "type": "module",
+  "id": "languages",
+  "name": { "ru": "Языковые пакеты", "en": "Language packs" },
+  "author": { "ru": "Верхолашин М. В.", "en": "M. V. Verkholashin", "github": "MikeVerx" },
+  "description": {
+    "ru": "Интерфейс BreezeCAD ещё на 14 языках: украинский, белорусский, казахский, немецкий, французский, испанский, итальянский, португальский, польский, чешский, турецкий, китайский, японский и корейский. Русский и английский уже встроены.",
+    "en": "BreezeCAD interface in 14 more languages: Ukrainian, Belarusian, Kazakh, German, French, Spanish, Italian, Portuguese, Polish, Czech, Turkish, Chinese, Japanese and Korean. Russian and English are built in."
+  },
+  "tags": ["языки", "перевод", "интерфейс"],
+  "minBreezeCAD": "0.2.5",
+  "license": "MPL-2.0",
+  "homepage": "https://github.com/BreezeCAD/breezecad/tree/main/translations",
+  "download": { "repo": "BreezeCAD/breezecad", "release": "latest", "assets": ["lang-*.zip"] }
+}
