@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 1,
+  "generated": "2026-11-08T20:00:18Z",
+  "items": [
+    {
+      "type": "library",
+      "id": "steel-stock",
+      "name": {
+        "ru": "Металлопрокат: профили, трубы, лист, уголки, швеллеры, двутавры",
+        "en": "Steel stock: hollow sections, tubes, sheet, angles, channels, I-beams"
+      },
+      "author": {
+        "ru": "Михаил Афонишев",
+        "en": "Mikhail Afonishev"
+      },
+      "description": {
+        "ru": "Шесть пакетов стандартных изделий по ГОСТ: профили гнутые замкнутые, трубы, листы, уголки, швеллеры и двутавры. Уже встроены в BreezeCAD — файлы здесь, если нужно поставить отдельно или посмотреть таблицы.",
+        "en": "Six standard part packs to Russian GOST standards: hollow sections, round tubes, sheet, angles, channels and I-beams. Already built into BreezeCAD — the files are here if you want them separately or need the tables."
+      },
+      "tags": [
+        "металлопрокат",
+        "гост",
+        "рамы"
+      ],
+      "minBreezeCAD": "0.2.3",
+      "license": "MPL-2.0",
+      "bundled": true,
+      "homepage": "https://github.com/BreezeCAD/breezecad/tree/main/assets/library",
+      "version": "1",
+      "published": null,
+      "files": [
+        {
+          "name": "angles.bzlib",
+          "url": "https://github.com/BreezeCAD/breezecad/raw/main/assets/library/angles.bzlib",
+          "size": null,
+          "platform": "any"
+        },
+        {
+          "name": "beams.bzlib",
+          "url": "https://github.com/BreezeCAD/breezecad/raw/main/assets/library/beams.bzlib",
+          "size": null,
+          "platform": "any"
+        },
+        {
+          "name": "channels.bzlib",
+          "url": "https://github.com/BreezeCAD/breezecad/raw/main/assets/library/channels.bzlib",
+          "size": null,
+          "platform": "any"
+        },
+        {
+          "name": "profiles.bzlib",
+          "url": "https://github.com/BreezeCAD/breezecad/raw/main/assets/library/profiles.bzlib",
+          "size": null,
+          "platform": "any"
+        },
+        {
+          "name": "sheets.bzlib",
+          "url": "https://github.com/BreezeCAD/breezecad/raw/main/assets/library/sheets.bzlib",
+          "size": null,
+          "platform": "any"
+        },
+        {
+          "name": "tubes.bzlib",
+          "url": "https://github.com/BreezeCAD/breezecad/raw/main/assets/library/tubes.bzlib",
+          "size": null,
+          "platform": "any"
+        }
+      ],
+      "source": {
+        "name": "entries/steel-stock.json",
+        "repo": null,
+        "url": "https://github.com/BreezeCAD/registry/blob/main/entries/steel-stock.json"
+      }
+    },
+    {
+      "type": "module",
+      "id": "mcp",
+      "name": {
+        "ru": "MCP-сервер для нейросетей",
+        "en": "MCP server for AI assistants"
+      },
+      "author": {
+        "ru": "Михаил Афонишев",
+        "en": "Mikhail Afonishev"
+      },
+      "description": {
+        "ru": "Нейросеть-ассистент строит прямо в открытом BreezeCAD: эскизы, операции, сборки, внешний вид — 65 инструментов, каждое изменение отменяется Ctrl+Z. Работает только на вашем компьютере и по ключу.",
+        "en": "Your AI assistant builds right in the open BreezeCAD: sketches, features, assemblies, appearance — 65 tools, every change undoable with Ctrl+Z. Listens only on your computer and only with a key."
+      },
+      "tags": [
+        "mcp",
+        "нейросети",
+        "автоматизация"
+      ],
+      "minBreezeCAD": "0.2.1",
+      "license": "MPL-2.0",
+      "homepage": "https://github.com/BreezeCAD/bz-module-mcp",
+      "bundled": false,
+      "version": "1.0.0",
+      "published": "2026-10-14",
+      "files": [
+        {
+          "name": "bz-mcp-1.0.0-linux-x64.bzmod",
+          "url": "https://github.com/BreezeCAD/breezecad/releases/download/modules/bz-mcp-1.0.0-linux-x64.bzmod",
+          "size": 246410,
+          "platform": "linux"
+        },
+        {
+          "name": "bz-mcp-1.0.0-macos-arm64.bzmod",
+          "url": "https://github.com/BreezeCAD/breezecad/releases/download/modules/bz-mcp-1.0.0-macos-arm64.bzmod",
+          "size": 169514,
+          "platform": "macos"
+        },
+        {
+          "name": "bz-mcp-1.0.0-windows-x64.bzmod",
+          "url": "https://github.com/BreezeCAD/breezecad/releases/download/modules/bz-mcp-1.0.0-windows-x64.bzmod",
+          "size": 1725681,
+          "platform": "windows"
+        }
+      ],
+      "source": {
+        "name": "entries/mcp.json",
+        "repo": null,
+        "url": "https://github.com/BreezeCAD/registry/blob/main/entries/mcp.json"
+      }
+    },
+    {
+      "type": "module",
+      "id": "module-template",
+      "name": {
+        "ru": "Шаблон модуля",
+        "en": "Module template"
+      },
+      "author": {
+        "ru": "Михаил Афонишев",
+        "en": "Mikhail Afonishev"
+      },
+      "description": {
+        "ru": "Заготовка для своего модуля: репозиторий с договором программы (SDK), примером на C, сборкой и тестами под Windows, Linux и macOS. «Use this template» — и модуль за пять минут.",
+        "en": "A starting point for your own module: SDK, a C example, build and tests for Windows, Linux and macOS. Press “Use this template” and have a module in five minutes."
+      },
+      "tags": [
+        "разработчикам",
+        "sdk",
+        "шаблон"
+      ],
+      "minBreezeCAD": "0.2.1",
+      "license": "MPL-2.0",
+      "homepage": "https://github.com/BreezeCAD/bz-module-template",
+      "bundled": false,
+      "version": "—",
+      "published": null,
+      "files": [
+        {
+          "name": "Use this template",
+          "url": "https://github.com/BreezeCAD/bz-module-template/generate",
+          "size": null,
+          "platform": "any"
+        }
+      ],
+      "source": {
+        "name": "entries/module-template.json",
+        "repo": null,
+        "url": "https://github.com/BreezeCAD/registry/blob/main/entries/module-template.json"
+      }
+    },
+    {
+      "type": "module",
+      "id": "languages",
+      "name": {
+        "ru": "Языковые пакеты",
+        "en": "Language packs"
+      },
+      "author": {
+        "ru": "Верхолашин М. В.",
+        "en": "M. V. Verkholashin",
+        "github": "MikeVerx"
+      },
+      "description": {
+        "ru": "Интерфейс BreezeCAD ещё на 14 языках: украинский, белорусский, казахский, немецкий, французский, испанский, итальянский, португальский, польский, чешский, турецкий, китайский, японский и корейский. Русский и английский уже встроены.",
+        "en": "BreezeCAD interface in 14 more languages: Ukrainian, Belarusian, Kazakh, German, French, Spanish, Italian, Portuguese, Polish, Czech, Turkish, Chinese, Japanese and Korean. Russian and English are built in."
+      },
+      "tags": [
+        "языки",
+        "перевод",
+        "интерфейс"
+      ],
+      "minBreezeCAD": "0.2.5",
+      "license": "MPL-2.0",
+      "homepage": "https://github.com/BreezeCAD/breezecad/tree/main/translations",
+      "bundled": false,
+      "version": "0.2.5.1-beta",
+      "published": "2026-11-06",
+      "files": [
+        {
+          "name": "lang-be.zip",
+          "url": "https://github.com/BreezeCAD/breezecad/releases/download/v0.2.5.1-beta/lang-be.zip",
+          "size": 45435,
+          "platform": "any"
+        },
+        {
+          "name": "lang-cs.zip",
+          "url": "https://github.com/BreezeCAD/breezecad/releases/download/v0.2.5.1-beta/lang-cs.zip",
+          "size": 40986,
+          "platform": "any"
+        },
+        {
+          "name": "lang-de.zip",
+          "url": "https://github.com/BreezeCAD/breezecad/releases/download/v0.2.5.1-beta/lang-de.zip",
+          "size": 71205,
+          "platform": "any"
+        },
+        {
+          "name": "lang-es.zip",
+          "url": "https://github.com/BreezeCAD/breezecad/releases/download/v0.2.5.1-beta/lang-es.zip",
+          "size": 38360,
+          "platform": "any"
+        },
+        {
+          "name": "lang-fr.zip",
+          "url": "https://github.com/BreezeCAD/breezecad/releases/download/v0.2.5.1-beta/lang-fr.zip",
+          "size": 41183,
+          "platform": "any"
+        },
+        {
+          "name": "lang-it.zip",
+          "url": "https://github.com/BreezeCAD/breezecad/releases/download/v0.2.5.1-beta/lang-it.zip",
+          "size": 40851,
+          "platform": "any"
+        },
+        {
+          "name": "lang-ja.zip",
+          "url": "https://github.com/BreezeCAD/breezecad/releases/download/v0.2.5.1-beta/lang-ja.zip",
+          "size": 41219,
+          "platform": "any"
+        },
+        {
+          "name": "lang-kk.zip",
+          "url": "https://github.com/BreezeCAD/breezecad/releases/download/v0.2.5.1-beta/lang-kk.zip",
+          "size": 43047,
+          "platform": "any"
+        },
+        {
+          "name": "lang-ko.zip",
+          "url": "https://github.com/BreezeCAD/breezecad/releases/download/v0.2.5.1-beta/lang-ko.zip",
+          "size": 38575,
+          "platform": "any"
+        },
+        {
+          "name": "lang-pl.zip",
+          "url": "https://github.com/BreezeCAD/breezecad/releases/download/v0.2.5.1-beta/lang-pl.zip",
+          "size": 38556,
+          "platform": "any"
+        },
+        {
+          "name": "lang-pt.zip",
+          "url": "https://github.com/BreezeCAD/breezecad/releases/download/v0.2.5.1-beta/lang-pt.zip",
+          "size": 42727,
+          "platform": "any"
+        },
+        {
+          "name": "lang-tr.zip",
+          "url": "https://github.com/BreezeCAD/breezecad/releases/download/v0.2.5.1-beta/lang-tr.zip",
+          "size": 40769,
+          "platform": "any"
+        },
+        {
+          "name": "lang-uk.zip",
+          "url": "https://github.com/BreezeCAD/breezecad/releases/download/v0.2.5.1-beta/lang-uk.zip",
+          "size": 67994,
+          "platform": "any"
+        },
+        {
+          "name": "lang-zh.zip",
+          "url": "https://github.com/BreezeCAD/breezecad/releases/download/v0.2.5.1-beta/lang-zh.zip",
+          "size": 40813,
+          "platform": "any"
+        }
+      ],
+      "source": {
+        "name": "entries/languages.json",
+        "repo": null,
+        "url": "https://github.com/BreezeCAD/registry/blob/main/entries/languages.json"
+      }
+    }
+  ],
+  "errors": []
+}

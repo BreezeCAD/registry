@@ -1,0 +1,17 @@
+{
+  "$schema": "../schema/breezecad.schema.json",
+  "schemaVersion": 1,
+  "type": "module",
+  "id": "module-template",
+  "name": { "ru": "Шаблон модуля", "en": "Module template" },
+  "author": { "ru": "Михаил Афонишев", "en": "Mikhail Afonishev" },
+  "description": {
+    "ru": "Заготовка для своего модуля: репозиторий с договором программы (SDK), примером на C, сборкой и тестами под Windows, Linux и macOS. «Use this template» — и модуль за пять минут.",
+    "en": "A starting point for your own module: SDK, a C example, build and tests for Windows, Linux and macOS. Press “Use this template” and have a module in five minutes."
+  },
+  "tags": ["разработчикам", "sdk", "шаблон"],
+  "minBreezeCAD": "0.2.1",
+  "license": "MPL-2.0",
+  "homepage": "https://github.com/BreezeCAD/bz-module-template",
+  "download": { "version": "—", "urls": [ { "url": "https://github.com/BreezeCAD/bz-module-template/generate", "name": "Use this template", "platform": "any" } ] }
+}

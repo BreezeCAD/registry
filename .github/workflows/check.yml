@@ -1,0 +1,20 @@
+# Проверка PR: паспорта в entries/ по схеме и список external.json.
+name: check
+
+on:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install jsonschema
+      - run: python3 scripts/build_index.py --check
+      - name: Try a full build (does not commit)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/build_index.py -o /tmp/index.json && python3 -c "import json;d=json.load(open('/tmp/index.json'));print(len(d['items']),'items')"
